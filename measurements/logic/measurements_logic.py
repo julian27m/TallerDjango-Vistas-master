@@ -18,3 +18,8 @@ def create_measurement(mea):
     measurement = Measurement(name=mea["name"])
     measurement.save()
     return measurement
+
+def delete_measurement(mea_pk):
+    measurement = get_measurement(mea_pk)
+    measurement.delete()
+    return measurement
